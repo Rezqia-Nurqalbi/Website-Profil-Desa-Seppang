@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Desa Seppang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Tambahkan transisi untuk efek halus */
+      .nav-link {
+        transition: color 0.3s ease;
+      }
+      /* Warna teks saat aktif */
+      .nav-link.active {
+        color: #f4a222;
+        font-weight: bold;
+      }
+      /* CSS untuk navbar responsif */
+      @media (max-width: 700px) {
+        #nav-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background-color: #042042;
+          padding: 1rem;
+          z-index: 1000;
+        }
+        #nav-menu.active {
+          display: block;
+        }
+        #nav-menu ul {
+          flex-direction: column;
+          gap: 0.5rem;
+        }
+        #nav-menu ul li {
+          width: 100%;
+        }
+        #nav-menu ul li a {
+          display: block;
+          padding: 0.5rem 1rem;
+        }
+      }
+
+      /* Tambahkan transisi untuk efek halus */
+      .nav-link {
+        transition: color 0.3s ease;
+      }
+      /* Warna teks saat aktif */
+      .nav-link.active {
+        color: #f4a222;
+        font-weight: bold;
+      }
+
+      .hover-zoom:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      .card:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .circle-img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin: auto;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-200 pt-14">
+    <header
+      class="fixed top-0 left-0 right-0 bg-[#042042] p-2 flex items-center z-50 shadow-lg transition-all duration-300"
+    >
+      <div class="container mx-auto flex items-center">
+        <div class="flex items-center">
+          <img
+            alt="Logo of Bulukumba"
+            class="h-10 w-10 mr-4 shadow-md hover:rotate-12 transition-transform duration-300"
+            height="40"
+            src="images/logo bulkum fix.png"
+            width="40"
+          />
+          <div>
+            <h1 class="text-[#f4a222] text-xl font-bold tracking-wider">
+              Desa Seppang
+            </h1>
+            <p class="text-white text-sm opacity-80">Kabupaten Bulukumba</p>
+          </div>
+        </div>
+        <!-- Tambahkan ikon hamburger di sini -->
+        <button id="hamburger" class="md:hidden text-white text-2xl ml-auto">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav id="nav-menu" class="ml-auto hidden md:block">
+          <ul class="flex flex-col md:flex-row md:space-x-4 text-white">
+            <li class="group relative">
+              <a
+                class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300"
+                href="index.html"
+              >
+                Home
+                <span
+                  class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"
+                ></span>
+              </a>
+            </li>
+            <li class="group relative">
+              <a
+                class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300"
+                href="profildesa.html"
+              >
+                Profil Desa
+                <span
+                  class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"
+                ></span>
+              </a>
+            </li>
+            <li class="group relative">
+              <a
+                class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300"
+                href="infografis.html"
+              >
+                Infografis
+                <span
+                  class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"
+                ></span>
+              </a>
+            </li>
+            <li class="group relative">
+              <a
+                class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300"
+                href="umkm.html"
+              >
+                UMKM
+                <span
+                  class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"
+                ></span>
+              </a>
+            </li>
+            <li class="group relative">
+              <a
+                class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300"
+                href="about.html"
+              >
+                About
+                <span
+                  class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"
+                ></span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto p-6">
+      <!-- Tentang Website -->
+
+      <div class="flex items-center mb-2">
+        <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+        <h1
+          class="text-4xl font-bold text-gray-800"
+          style="font-family: 'Poppins', sans-serif"
+        >
+          Tentang Website
+        </h1>
+      </div>
+      <h2 class="text-2xl font-semibold text-gray-500 mb-4">Desa Seppang</h2>
+
+      <p class="mb-4 text-justify leading-relaxed">
+        Website Profil Desa Seppang ini dibuat oleh mahasiswa KKN Universitas
+        Hasanuddin Gelombang 114 yang melaksanakan pengabdian di Desa Seppang.
+        Website ini tidak akan terwujud tanpa dukungan penuh dari Kepala Desa,
+        aparat desa, dan partisipasi aktif masyarakat setempat.
+      </p>
+
+      <p class="mb-4 text-justify leading-relaxed">
+        <span class="font-semibold text-blue-700"
+          >Pembuatan website profil dan informasi desa</span
+        >
+        merupakan salah satu program kerja prioritas dalam mendukung
+        transparansi informasi dan digitalisasi desa. Website ini diharapkan
+        menjadi sarana komunikasi dan informasi yang bermanfaat, baik bagi
+        masyarakat lokal maupun khalayak luas.
+      </p>
+
+      <p class="mb-6 text-justify leading-relaxed">
+        Lebih dari sekadar program kerja, proyek ini adalah
+        <span class="font-semibold text-blue-700"
+          >bentuk kontribusi mahasiswa terhadap pembangunan desa berbasis
+          teknologi informasi berkelanjutan</span
+        >.
+      </p>
+
+      <!-- Tentang Mahasiswa KKN -->
+      <div class="flex items-center mb-2">
+        <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+        <h1
+          class="text-4xl font-bold text-gray-800"
+          style="font-family: 'Poppins', sans-serif"
+        >
+          Tentang Mahasiswa KKN
+        </h1>
+      </div>
+      <h2 class="text-2xl font-semibold text-gray-500 mb-4">
+        Tim Pengembang Website
+      </h2>
+
+      <p class="mb-4 text-justify leading-relaxed">
+        Website ini merupakan salah satu bentuk kontribusi nyata dari Mahasiswa
+        KKN Gelombang 114 Universitas Hasanuddin yang melaksanakan pengabdian di
+        Desa Seppang, di bawah bimbingan
+        <span class="font-semibold text-blue-700"
+          >Dr. Fahrul, S.Pi., M.Si.</span
+        >
+        selaku dosen pengampu kegiatan, bersama
+        <span class="font-semibold text-blue-700"
+          >Dosen Pembimbing Kegiatan</span
+        >. Posko KKN ini diketuai oleh
+        <span class="font-semibold text-blue-700">Fajar Gustiawan Akhmad</span>
+        dan beranggotakan 7 orang mahasiswa dari berbagai jurusan.
+      </p>
+
+      <p class="mb-4 text-justify leading-relaxed">
+        Program kerja yang disusun berdasarkan hasil observasi dan kebutuhan
+        masyarakat setempat diharapkan dapat memberikan dampak positif dan
+        berkelanjutan bagi perkembangan Desa Seppang, khususnya dalam hal
+        penyediaan informasi berbasis digital.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-8">
+        <div
+          onclick="showPopup({
+                nama: 'REZQIA NURQALBI',
+                nim: 'H071221025',
+                role: 'Website Developer',
+                foto: 'imagesabout/fotoqia.jpeg',
+                deskripsi: 'Mahasiswa Universitas Hasanuddin, Fakultas MIPA, Prodi Sistem Informasi, Angkatan 22, salah satu anggota dari tim KKNT-114 Desa Seppang'
+            })"
+          class="bg-white p-4 rounded-xl card text-center w-64 shadow-md cursor-pointer"
+        >
+          <img
+            src="imagesabout/qia.jpeg"
+            alt="Foto Qia"
+            class="circle-img mb-3 object-cover rounded-full border-4 mx-auto"
+            style="border-color: #042042"
+          />
+          <p class="font-semibold mt-2" style="color: #042042">
+            REZQIA NURQALBI
+          </p>
+          <p class="text-sm text-gray-500">Website Developer</p>
+        </div>
+
+        <div
+          onclick="showPopup({
+                nama: 'TIM KKNT-114 DESA SEPPANG',
+                nim: '',
+                role: '',
+                foto: 'imagesabout/fotokami.jpeg',
+                deskripsi: 'Mahasiswa KKN Universitas Hasanuddin Gelombang 114 - Desa Seppang'
+            })"
+          class="bg-white p-4 rounded-xl card text-center w-64 shadow-md cursor-pointer"
+        >
+          <img
+            src="imagesabout/fotokami.jpeg"
+            alt="Foto kami"
+            class="circle-img mb-3 object-cover rounded-full border-4 mx-auto"
+            style="border-color: #042042"
+          />
+          <p class="font-semibold mt-2" style="color: #042042">
+            MAHASISWA KKN GEL. 114
+          </p>
+          <p class="text-sm text-gray-500">POSKO DESA SEPPANG</p>
+        </div>
+
+        <div
+          onclick="showPopup({
+                nama: 'Logo Posko KKN UNHAS',
+                nim: '',
+                role: '',
+                foto: 'images/logo kkn seppang.png',
+                deskripsi: 'Logo Posko KKN Universitas Hasanuddin Desa Seppang'
+            })"
+          class="bg-white p-4 rounded-xl card text-center w-64 shadow-md cursor-pointer"
+        >
+          <img
+            src="images/logo kkn seppang.png"
+            alt="Foto Logo"
+            class="circle-img mb-3 object-cover rounded-full border-4 mx-auto"
+            style="border-color: #042042"
+          />
+          <p class="font-semibold mt-2" style="color: #042042">
+            Logo Posko KKN UNHAS
+          </p>
+          <p class="text-sm text-gray-500">DESA SEPPANG</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#042042] text-white pb-4">
+      <div class="container mx-auto px-8 py-8">
+        <!-- Tambah padding horizontal -->
+        <div class="flex justify-between items-center pb-6">
+          <!-- Perkecil padding bottom -->
+          <div class="flex space-x-6 items-center">
+            <!-- Logo 1 -->
+            <img
+              alt="Logo 1"
+              class="h-12 opacity-80 hover:opacity-100 transition-opacity"
+              src="images/logo bulkum fix.png"
+            />
+            <!-- Logo 2 - Diperbesar skalanya tanpa ubah tinggi -->
+            <img
+              alt="Logo 2"
+              class="h-12 scale-150 w-auto opacity-80 hover:opacity-100 transition-transform"
+              src="images/logo kkn seppang.png"
+            />
+            <!-- Logo 3 -->
+            <img
+              alt="Logo 3"
+              class="h-12 opacity-80 hover:opacity-100 transition-opacity"
+              src="images/logo unhas.png"
+            />
+          </div>
+          <div class="flex space-x-6">
+            <!-- Perbesar jarak antar ikon -->
+            <!-- <a class="text-white text-sm hover:text-blue-300 transition-colors" href="">
+                    <i class="fab fa-facebook-f fa-2x"></i> Ukuran ikon diperbesar -->
+            <!-- </a> -->
+            <a
+              class="text-white text-sm hover:text-pink-400 transition-colors"
+              href="https://www.instagram.com/kkn114.desa_seppang?igsh=MnhiZWhmYnh1eWUy"
+            >
+              <i class="fab fa-instagram fa-2x"></i>
+              <!-- Ukuran ikon diperbesar -->
+            </a>
+            <a
+              class="text-white text-sm hover:text-red-500 transition-colors"
+              href="https://maps.app.goo.gl/cT4v236yNhPnChHP8"
+            >
+              <i class="fas fa-map-marker-alt fa-2x"></i>
+              <!-- Ukuran ikon diperbesar -->
+            </a>
+            <!-- <a class="text-white text-sm hover:text-gray-300 transition-colors" href="#">
+                    <i class="fab fa-github fa-2x"></i> 
+                </a> -->
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6 text-justify">
+          <!-- Website Profil Desa -->
+          <div class="space-y-2">
+            <h2 class="text-base text-[#f4a222] font-bold">
+              Website Profil Desa
+            </h2>
+            <p class="text-xs text-gray-300">
+              Website profil Desa merupakan situs web yang memuat informasi
+              dasar mengenai desa, sejarah, visi dan misi desa, sampai dengan
+              peta wilayah desa.
+            </p>
+          </div>
+
+          <!-- Developer -->
+          <div class="space-y-2">
+            <h2 class="text-base text-[#f4a222] font-bold">Developer</h2>
+            <p class="text-xs text-gray-300">
+              Website ini dibuat oleh Rezqia, Mahasiswa KKN Universitas
+              Hasanuddin Gelombang 114 Desa Seppang pada Juli 2025.
+            </p>
+          </div>
+
+          <!-- Harapan & Tujuan + Desa Seppang -->
+          <div class="space-y-4 md:col-span-2 md:flex md:space-x-4">
+            <!-- Harapan & Tujuan -->
+            <div class="space-y-2 md:w-1/2">
+              <h2 class="text-base text-[#f4a222] font-bold">
+                Harapan &amp; Tujuan
+              </h2>
+              <p class="text-xs text-gray-300">
+                Situs web profil ini dibuat untuk tujuan promosi dan publisitas
+                Desa Seppang agar lebih dikenal oleh khalayak ramai baik di
+                dalam maupun di luar Desa Seppang.
+              </p>
+            </div>
+
+            <!-- Desa Seppang -->
+            <div class="space-y-2 md:w-1/2">
+              <h2 class="text-base text-[#f4a222] font-bold">Desa Seppang</h2>
+              <p class="text-xs text-gray-300">
+                Kec. Ujung Loe, Kab. Bulukumba, Sulawesi Selatan
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-6 border-t-2 border-gray-600 pt-4">
+          <p class="text-xs text-gray-400">
+            © 2025 Desa Seppang - All rights reserved
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div
+      id="popup"
+      class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50"
+    >
+      <div
+        class="bg-white rounded-xl shadow-lg w-full max-w-sm p-6 relative text-center"
+      >
+        <button
+          onclick="closePopup()"
+          class="absolute top-2 right-4 text-gray-500 hover:text-black text-2xl font-bold"
+        >
+          &times;
+        </button>
+
+        <h2
+          id="popupNama"
+          class="text-xl font-bold mb-1"
+          style="color: #042042"
+        ></h2>
+        <p id="popupNIM" class="text-sm text-gray-600 mb-2 hidden"></p>
+
+        <img
+          id="popupFoto"
+          src=""
+          alt="Foto"
+          class="w-48 h-auto object-cover mx-auto mb-4 rounded-md"
+        />
+
+        <p
+          id="popupRole"
+          class="text-base font-semibold text-gray-700 mb-1 hidden"
+        ></p>
+        <p id="popupDeskripsi" class="text-sm text-gray-600"></p>
+      </div>
+    </div>
+
+    <script>
+      // Toggle hamburger menu
+      const hamburger = document.getElementById("hamburger");
+      const navMenu = document.getElementById("nav-menu");
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+
+      function showPopup(data) {
+        document.getElementById("popupNama").innerText = data.nama || "";
+
+        const nimElem = document.getElementById("popupNIM");
+        if (data.nim) {
+          nimElem.innerText = data.nim;
+          nimElem.classList.remove("hidden");
+        } else {
+          nimElem.classList.add("hidden");
+        }
+
+        const roleElem = document.getElementById("popupRole");
+        if (data.role) {
+          roleElem.innerText = data.role;
+          roleElem.classList.remove("hidden");
+        } else {
+          roleElem.classList.add("hidden");
+        }
+
+        document.getElementById("popupFoto").src = data.foto || "";
+        document.getElementById("popupDeskripsi").innerText =
+          data.deskripsi || "";
+        document.getElementById("popup").classList.remove("hidden");
+      }
+
+      function closePopup() {
+        document.getElementById("popup").classList.add("hidden");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentPage = window.location.pathname.split("/").pop(); // nama file
+        const links = document.querySelectorAll(".nav-link");
+
+        links.forEach((link) => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Desa Seppang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"> 
+    <style>
+        /* CSS untuk navbar responsif */
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+        @media (max-width: 700px) {
+            #nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #042042;
+                padding: 1rem;
+                z-index: 1000;
+            }
+            #nav-menu.active {
+                display: block;
+            }
+            #nav-menu ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            #nav-menu ul li {
+                width: 100%;
+            }
+            #nav-menu ul li a {
+                display: block;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        @keyframes fadeInUpLoop {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            30% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            70% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        .fade-in-up {
+        animation: fadeInUpLoop 6s ease-in-out infinite;
+        }
+        .fade-in-up.delay-1 {
+        animation-delay: 1s;
+        }
+        .fade-in-up.delay-2 {
+        animation-delay: 2s;
+        }
+        .fade-in-up.delay-3 {
+        animation-delay: 3s;
+        }
+    </style>
+</head>
+<div class="bg-gray-200 pt-14">
+    <header class="fixed top-0 left-0 right-0 bg-[#042042] p-2 flex items-center z-50 shadow-lg transition-all duration-300">
+        <div class="container mx-auto flex items-center">
+            <div class="flex items-center">
+                <img 
+                    alt="Logo of Bulukumba" 
+                    class="h-10 w-10 mr-4 shadow-md hover:rotate-12 transition-transform duration-300" 
+                    height="40" 
+                    src="images/logo bulkum fix.png" 
+                    width="40" 
+                />
+                <div>
+                    <h1 class="text-[#f4a222] text-xl font-bold tracking-wider">Desa Seppang</h1>
+                    <p class="text-white text-sm opacity-80">Kabupaten Bulukumba</p>
+                </div>
+            </div>
+            <!-- Tambahkan ikon hamburger di sini -->
+            <button id="hamburger" class="md:hidden text-white text-2xl ml-auto">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="nav-menu" class="ml-auto hidden md:block">
+                <ul class="flex flex-col md:flex-row md:space-x-4 text-white">
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="index.html"
+                        >
+                            Home
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="profildesa.html"
+                        >
+                            Profil Desa
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="infografis.html"
+                        >
+                            Infografis
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="umkm.html"
+                        >
+                            UMKM
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="about.html"
+                        >
+                            About
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>
+
+<body class="bg-gray-200">
+    <div class="relative w-full overflow-hidden h-[380px]">
+        <!-- Carousel -->
+        <div class="carousel flex transition-transform duration-700 ease-in-out" id="carousel">
+            <img src="images/kantor desa.jpeg" class="w-full h-[400px] object-cover flex-shrink-0" />
+            <img src="images/bg1.2.jpeg" class="w-full h-[400px] object-cover flex-shrink-0" />
+            <img src="images/bg.jpeg" class="w-full h-[400px] object-cover flex-shrink-0" />
+        </div>
+
+        <div class="absolute inset-0 bg-gradient-to-br from-[#042042]/90 via-[#042042]/60 to-[#042042]/90"></div>
+
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 font-[Poppins]">
+            <h1 class="text-3xl md:text-5xl font-bold text-[#f4a222] drop-shadow-md fade-in-up">
+                SELAMAT DATANG
+            </h1>
+            <h2 class="text-xl md:text-3xl font-semibold text-[#f4a222] mb-4 drop-shadow-md fade-in-up delay-1">
+                DI WEBSITE PROFIL DESA SEPPANG
+            </h2>
+            <p class="text-sm md:text-lg text-gray-200 max-w-2xl fade-in-up delay-2">
+                Jelajahi informasi lengkap mengenali Desa Seppang, sejarah, infografis, dan UMKM yang ada di Desa Seppang.
+            </p>
+           <a href="#profil-desa" 
+            class="mt-6 bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-5 rounded-lg inline-flex items-center transition duration-300 fade-in-up delay-3">
+                <i class="fas fa-arrow-down mr-2"></i>
+                Selengkapnya
+            </a>
+
+        </div>
+
+
+
+        <!-- Tombol Panah -->
+        <button id="prev" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-2 rounded-full hover:bg-opacity-70">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button id="next" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black bg-opacity-50 text-white px-3 py-2 rounded-full hover:bg-opacity-70">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+
+<div id="profil-desa" class="scroll-mt-20 container mx-auto px-8 p-4 text-gray-800">
+    <div class="flex flex-col md:flex-row items-center md:items-start">
+        <div class="md:w-2/3">
+            <div class="flex items-center mb-1">
+                <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+                <h1 class="text-4xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Profil</h1>
+            </div>
+            <h2 class="text-2xl text-gray-500 mb-4" style="font-family: 'Poppins', sans-serif;">Desa Seppang</h2>
+            <p class="mb-4 text-justify mr-4" style="font-family: 'Poppins', sans-serif;">
+                Desa Seppang merupakan salah satu desa di Kabupaten Bulukumba yang memiliki sejarah panjang dan cerita klasik dalam proses pembentukannya. Dahulu, wilayah ini dikenal dengan nama "Sappa", yang terletak di sebelah utara Sungai Kuboddong. Nama "Sappa" berasal dari ungkapan dalam bahasa Bugis: "Sappa'ki Passikajang na Bone, Sappa' tokki Bone na Kajang", yang secara makna berarti "Carilah Kajangnya Bone, juga carilah Bonenya Kajang". Ungkapan ini merujuk pada masa kejayaan Kerajaan Bone di bawah pemerintahan Arung Palakka, ketika salah satu kerabat dekat raja diasingkan ke wilayah yang saat itu dikenal sebagai Tanah Kajang. Beberapa tahun kemudian, raja memerintahkan untuk mencari kembali kerabat tersebut, dan kalimat itulah yang digunakan sebagai petunjuk. Dari peristiwa itulah, nama "Sappa" mulai dikenal dan melekat sebagai bagian dari identitas wilayah ini.
+            </p>
+            <p class="mb-4 text-justify mr-4" style="font-family: 'Poppins', sans-serif;">
+                Saat ini, Desa Seppang memiliki luas wilayah sekitar 1.381,86 hektare dan secara administratif terbagi menjadi empat dusun, yaitu Dusun Batuloe, Dusun Kampung Tengnga, Dusun Tanah Cellae, dan Dusun Mattirowalie. Desa ini tidak hanya dikenal dengan sejarah dan budayanya yang kuat, tetapi juga terus berkembang dengan berbagai potensi yang dimiliki demi meningkatkan kesejahteraan masyarakat.
+            </p>
+        </div>
+        <div class="md:w-1/3 flex justify-center md:justify-end self-center mt-8 md:mt-24">
+            <div class="text-center w-full">
+                <img 
+                    src="images/kantordesa.jpeg" 
+                    alt="Lokasi Desa Seppang" 
+                    class="w-full h-200 object-cover rounded-lg shadow-lg transition-transform duration-300 hover:scale-105"
+                />
+                <p class="text-sm text-gray-500 mt-2 font-semibold tracking-wide">
+                    Desa Seppang, Kecamatan Ujung Loe, Bulukumba
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    <div class="container mx-auto px-8 p-4 bg-[#042042] text-white">
+        <div class="flex flex-col md:flex-row">
+            <div class="md:w-1/3 flex justify-center md:justify-end">
+                <div class="text-center">
+                    <img alt="Peta desa Seppang" class="border border-gray-600" height="600" src="images/buku sejarah.jpeg" width="400"/>
+                    <!-- <p class="text-sm text-[#f4a222] mt-2">Sejarah Desa Seppang</p> -->
+                </div>
+            </div>
+            <div class="md:w-2/3 ml-4">
+                <div class="flex items-center mb-1">
+                    <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+                    <h1 class="text-4xl font-bold text-[#f4a222]" style="font-family: 'Poppins', sans-serif;">Sejarah</h1>
+                </div>
+                <h2 class="text-2xl text-gray-300 mb-4"style="font-family: 'Poppins', sans-serif;">Desa Seppang</h2>
+                <p class="mb-4 text-justify text-gray-200"style="font-family: 'Poppins', sans-serif;">
+                    Desa Seppang merupakan sebuah Desa yang menyimpan sejuta cerita klasik dan sejarah panjang dalam proses pembentukannya. Berawal dari sebuah wilayah pemukiman yang dikenal sebagai wilayah "Sappa" dan terletak di sebelah utara Sungai Kuboddong. Nama "Sappa" memiliki arti cari yang diambil dari kalimat "Sappa'ki Passikajang na Bone, Sappa' tokki Bone na Kajang" (Carilah Kajangnya Bone, juga carilah Bonenya Kajang). Penafsiran kalimat itu merupakan sebuah peristiwa dimulai dari zaman kejayaan Kerajaan Arung Palakka di Bone. Salah-satu kerabat dekat Raja Bone diasingkan ke daerah Kabupaten Bulukumba yang pada masa itu masih dikenal dengan tanah Kajang. Setelah beberapa tahun kemudian, turunnlah perintah raja untuk mencari kembali kerabat tersebut dengan menggunakan kalimat diatas “Sappa'ki Passikajang na Bone" yang dipahami maksudnya adalah: "Carilah orang Bone yang ada ditanah Kajang".
+                </p>
+                <div class="mt-4">
+                    <a class="inline-block bg-[#f4a222] text-black font-bold py-2 px-4 rounded-lg shadow-md hover:bg-[#e5941e] transition-colors duration-300" href="sejarah.html">
+                     Selengkapnya
+                     <i class="fas fa-arrow-right mr-2">
+                    </i>
+                    </a>
+                   </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="max-w-6xl mx-auto p-4">
+        <div class="flex items-center mb-1">
+                    <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+                    <h1 class="text-4xl font-bold text-gray-800">Peta Lokasi Desa</h1>
+                </div>
+        <p class="text-gray-500">Peta Lokasi Desa Seppang</p>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <div class="text-center w-full">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24200.910901906653!2d120.23054049999999!3d-5.502764499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dbc0121ac4b59e9%3A0x6388f377db454fc1!2sSeppang%2C%20Kec.%20Ujung%20Loe%2C%20Kabupaten%20Bulukumba%2C%20Sulawesi%20Selatan!5e1!3m2!1sid!2sid!4v1752840980036!5m2!1sid!2sid"
+                    width="100%"
+                    height="400"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="rounded-md"
+                ></iframe>
+                <p class="text-sm text-gray-500 mt-2">
+                    Lokasi Desa Seppang, Kecamatan Ujung Loe, Bulukumba
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<div class="px-8 p-8 bg-[#042042] items-center justify-center mt-4 mb-8">
+  <h1 class="text-3xl font-bold text-white text-center mb-8">Data Monografi</h1>
+  
+  <div class="flex flex-wrap justify-center gap-8">
+    <!-- Dusun -->
+    <div class="flex flex-col items-center w-40">
+      <i class="fas fa-home text-3xl text-[#f4a222] mb-2"></i>
+      <p class="text-3xl font-bold text-[#f4a222]">4</p>
+      <p class="text-white text-center">Dusun</p>
+    </div>
+
+    <!-- Jumlah Penduduk -->
+    <div class="flex flex-col items-center w-40">
+      <i class="fas fa-users text-3xl text-[#f4a222] mb-2"></i>
+      <p class="text-3xl font-bold text-[#f4a222]">4565</p>
+      <p class="text-white text-center">Jumlah Penduduk</p>
+    </div>
+
+    <!-- Luas Desa -->
+    <div class="flex flex-col items-center w-40">
+      <i class="fas fa-map text-3xl text-[#f4a222] mb-2"></i>
+      <p class="text-3xl font-bold text-[#f4a222]">1.381,86&nbsp;Ha</p>
+      <p class="text-white text-center">Luas Desa</p>
+    </div>
+
+    <!-- Kepala Keluarga -->
+    <div class="flex flex-col items-center w-40">
+      <i class="fas fa-user text-3xl text-[#f4a222] mb-2"></i>
+      <p class="text-3xl font-bold text-[#f4a222]">939</p>
+      <p class="text-white text-center">Kepala Keluarga</p>
+    </div>
+
+    <!-- RT -->
+    <div class="flex flex-col items-center w-40">
+      <i class="fas fa-network-wired text-3xl text-[#f4a222] mb-2"></i>
+      <p class="text-3xl font-bold text-[#f4a222]">24</p>
+      <p class="text-white text-center">RT</p>
+    </div>
+
+    <!-- RW -->
+    <div class="flex flex-col items-center w-40">
+      <i class="fas fa-network-wired text-3xl text-[#f4a222] mb-2"></i>
+      <p class="text-3xl font-bold text-[#f4a222]">9</p>
+      <p class="text-white text-center">RW</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+    
+
+    <script>
+      
+      document.addEventListener('DOMContentLoaded', function() {
+      
+          const currentLocation = location.pathname.split('/').pop();
+          
+      
+          const navLinks = document.querySelectorAll('.nav-link');
+          navLinks.forEach(link => {
+              
+              link.addEventListener('click', function() {
+              
+                  navLinks.forEach(l => {
+                      l.classList.remove('active');
+                  });
+                  
+              
+                  this.classList.add('active');
+              });
+
+              
+              if(link.getAttribute('href') === currentLocation) {
+                  link.classList.add('active');
+              }
+          });
+
+         
+         const moreDetailsLink = document.querySelector('.mt-8 a');
+            const modal = document.getElementById('monographyModal');
+            const closeModalBtn = document.getElementById('closeModal');
+
+           
+            moreDetailsLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                modal.classList.remove('hidden');
+            });
+
+           
+            closeModalBtn.addEventListener('click', function() {
+                modal.classList.add('hidden');
+            });
+
+            
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+
+<div class="container mx-auto max-w-7xl px-8 py-8">
+    <h1 class="text-center text-4xl font-extrabold mb-10 text-gray-800">Jelajahi</h1>
+
+    <!-- 3 kolom di desktop -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- KOTAK 1 -->
+        <a href="profildesa.html" class="block bg-[#042042] shadow-lg rounded-lg overflow-hidden border-4 border-gray-800 transform transition duration-500 hover:shadow-2xl">
+            <img alt="Profil Desa" class="w-full h-60 object-cover" src="images/kantordesa.jpeg" />
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2 text-[#f4a222]">Profil Desa</h2>
+                <p class="text-gray-200">Deskripsi singkat mengenai sejarah, wilayah, dan struktur pemerintahan Desa Seppang.</p>
+            </div>
+        </a>
+
+        <!-- KOTAK 2 -->
+        <a href="infografis.html" class="block bg-[#042042] shadow-lg rounded-lg overflow-hidden border-4 border-gray-800 transform transition duration-500 hover:shadow-2xl">
+            <img alt="Infografis" class="w-full h-60 object-cover" src="images/infografis.png" />
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2 text-[#f4a222]">Infografis</h2>
+                <p class="text-gray-200">Visualisasi data dan informasi penting seputar desa, seperti penduduk, fasilitas, dan potensi lokal.</p>
+            </div>
+        </a>
+
+        <!-- KOTAK 3 -->
+        <a href="umkm.html" class="block bg-[#042042] shadow-lg rounded-lg overflow-hidden border-4 border-gray-800 transform transition duration-500 hover:shadow-2xl">
+            <img alt="UMKM" class="w-full h-60 object-cover" src="images/umkm.jpeg" />
+            <div class="p-6">
+                <h2 class="text-2xl font-bold mb-2 text-[#f4a222]">UMKM</h2>
+                <p class="text-gray-200">UMKM (Usaha Mikro Kecil dan Menengah) yang berkembang di Desa Seppang dan mendukung perekonomian lokal.</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+
+
+    <div class="bg-[#042042] text-white pb-4">
+
+      
+   <div class="container mx-auto px-8 py-8"> <!-- Tambah padding horizontal -->
+        <div class="flex justify-between items-center pb-6"> <!-- Perkecil padding bottom -->
+            <div class="flex space-x-6 items-center">
+                <!-- Logo 1 -->
+                <img
+                    alt="Logo 1"
+                    class="h-12 opacity-80 hover:opacity-100 transition-opacity"
+                    src="images/logo bulkum fix.png"
+                />
+                <!-- Logo 2 - Diperbesar skalanya tanpa ubah tinggi -->
+                <img
+                    alt="Logo 2"
+                    class="h-12 scale-150 w-auto opacity-80 hover:opacity-100 transition-transform"
+                    src="images/logo kkn seppang.png"
+                />
+                <!-- Logo 3 -->
+                <img
+                    alt="Logo 3"
+                    class="h-12 opacity-80 hover:opacity-100 transition-opacity"
+                    src="images/logo unhas.png"
+                />
+            </div>
+            <div class="flex space-x-6"> <!-- Perbesar jarak antar ikon -->
+                <!-- <a class="text-white text-sm hover:text-blue-300 transition-colors" href="">
+                    <i class="fab fa-facebook-f fa-2x"></i> Ukuran ikon diperbesar -->
+                <!-- </a> -->
+                <a class="text-white text-sm hover:text-pink-400 transition-colors" href="https://www.instagram.com/kkn114.desa_seppang?igsh=MnhiZWhmYnh1eWUy">
+                    <i class="fab fa-instagram fa-2x"></i> <!-- Ukuran ikon diperbesar -->
+                </a>
+                <a class="text-white text-sm hover:text-red-500 transition-colors" href="https://maps.app.goo.gl/cT4v236yNhPnChHP8">
+                    <i class="fas fa-map-marker-alt fa-2x"></i> <!-- Ukuran ikon diperbesar -->
+                </a>
+                <!-- <a class="text-white text-sm hover:text-gray-300 transition-colors" href="#">
+                    <i class="fab fa-github fa-2x"></i> 
+                </a> -->
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6 text-justify">
+            <!-- Website Profil Desa -->
+            <div class="space-y-2">
+                <h2 class="text-base text-[#f4a222] font-bold">Website Profil Desa</h2>
+                <p class="text-xs text-gray-300">
+                    Website profil Desa merupakan situs web yang memuat informasi dasar mengenai desa, sejarah, visi dan misi desa, sampai dengan peta wilayah desa.
+                </p>
+            </div>
+
+            <!-- Developer -->
+            <div class="space-y-2">
+                <h2 class="text-base text-[#f4a222] font-bold">Developer</h2>
+                <p class="text-xs text-gray-300">
+                    Website ini dibuat oleh Rezqia, Mahasiswa KKN Universitas Hasanuddin Gelombang 114 Desa Seppang pada Juli 2025.
+                </p>
+            </div>
+
+            <!-- Harapan & Tujuan + Desa Seppang -->
+            <div class="space-y-4 md:col-span-2 md:flex md:space-x-4">
+                <!-- Harapan & Tujuan -->
+                <div class="space-y-2 md:w-1/2">
+                    <h2 class="text-base text-[#f4a222] font-bold">Harapan &amp; Tujuan</h2>
+                    <p class="text-xs text-gray-300">
+                        Situs web profil ini dibuat untuk tujuan promosi dan publisitas Desa Seppang agar lebih dikenal oleh khalayak ramai baik di dalam maupun di luar Desa Seppang.
+                    </p>
+                </div>
+
+                <!-- Desa Seppang -->
+                <div class="space-y-2 md:w-1/2">
+                    <h2 class="text-base text-[#f4a222] font-bold">Desa Seppang</h2>
+                    <p class="text-xs text-gray-300">
+                        Kec. Ujung Loe, Kab. Bulukumba, Sulawesi Selatan
+                    </p>
+                </div>
+            </div>
+        </div>
+
+<div class="text-center mt-6 border-t-2 border-gray-600 pt-4">
+    <p class="text-xs text-gray-400">
+        © 2025 Desa Seppang - All rights reserved
+    </p>
+</div>
+</div>
+</div>
+
+<script>
+  let index = 0;
+  const carousel = document.getElementById('carousel');
+  const slides = carousel.children;
+  const total = slides.length;
+
+  // Fungsi untuk ubah slide
+  function updateSlide() {
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  // Tombol Next
+  document.getElementById('next').addEventListener('click', () => {
+    index = (index + 1) % total;
+    updateSlide();
+  });
+
+  // Tombol Prev
+  document.getElementById('prev').addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    updateSlide();
+  });
+
+
+  // Toggle hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+  const currentPage = window.location.pathname.split("/").pop(); // nama file
+  const links = document.querySelectorAll(".nav-link");
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+
+  </body>
+</html>

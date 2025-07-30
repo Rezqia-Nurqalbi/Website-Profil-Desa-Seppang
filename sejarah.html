@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Desa Seppang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    @keyframes fadeInUpLoop {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            30% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            70% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+        }
+        .fade-in-up {
+        animation: fadeInUpLoop 6s ease-in-out infinite;
+        }
+        .fade-in-up.delay-1 {
+        animation-delay: 1s;
+        }
+        .fade-in-up.delay-2 {
+        animation-delay: 2s;
+        }
+        .fade-in-up.delay-3 {
+        animation-delay: 3s;
+        }
+</style>
+
+<body class="bg-gray-200">
+    <div class="relative">
+        <!-- Background Image -->
+        <img alt="Background image of Desa Seppang" 
+            class="w-full h-[500px] object-cover" 
+            src="images/bg.jpeg"/>
+        <!-- Text with Animation -->
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-4 font-[Poppins]">
+            <h1 class="text-3xl md:text-5xl font-bold text-[#f4a222] drop-shadow-md fade-in-up">
+                SEJARAH
+            </h1>
+            <h2 class="text-xl md:text-3xl font-semibold text-[#f4a222] mb-4 drop-shadow-md fade-in-up delay-1">
+                DESA SEPPANG
+            </h2>
+            <p class="text-sm md:text-lg text-gray-200 max-w-2xl fade-in-up delay-2">
+                Temukan informasi sejarah Desa Seppang beserta perkembangan.
+            </p>
+            <!-- Tombol Back to Home -->
+            <a href="index.html" 
+            class="mt-6 bg-yellow-500 hover:bg-yellow-700 text-black font-bold py-2 px-5 rounded-lg inline-flex items-center transition duration-300 fade-in-up delay-3">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Back to Home
+            </a>
+        </div>
+    </div>
+                                        
+    <div class="container mx-auto px-8 py-3 bg-white rounded-lg shadow-lg mt-10">
+        
+        <div class="flex items-center mt-8 mb-3">
+            <div class="w-1 bg-blue-800 h-12 mr-4"></div>
+            <h1 class="text-3xl font-bold text-black" style="font-family: 'Poppins', sans-serif;">SEJARAH DESA SEPPANG</h1>
+        </div>
+        <p class="text-justify mb-4">
+            Desa Seppang merupakan sebuah Desa yang menyimpan sejuta cerita klasik dan sejarah panjang dalam proses pembentukannya. Berawal dari sebuah wilayah pemukiman yang dikenal sebagai wilayah "Sappa" dan terletak di sebelah utara Sungai Kuboddong. Nama "Sappa" memiliki arti cari yang diambil dari kalimat "Sappa'ki Passikajang na Bone, Sappa' tokki Bone na Kajang" (Carilah Kajangnya Bone, juga carilah Bonenya Kajang). Penafsiran kalimat itu merupakan sebuah peristiwa dimulai dari zaman kejayaan Kerajaan Arung Palakka di Bone. Salah-satu kerabat dekat Raja Bone diasingkan ke daerah Kabupaten Bulukumba yang pada masa itu masih dikenal dengan tanah Kajang. Setelah beberapa tahun kemudian, turunnlah perintah raja untuk mencari kembali kerabat tersebut dengan menggunakan kalimat diatas “Sappa'ki Passikajang na Bone" yang dipahami maksudnya adalah: "Carilah orang Bone yang ada ditanah Kajang".
+        </p>
+        <p class="text-justify mb-4">
+           Setelah perintah dilaksanakan, akhirnya kerabat "Arung" (raja) tersebut ditemukan di sebuah wilayah yang kemudian dikenal dengan Kampung Sappa. Pada masa penjajahan kolonial datanglah para tentara Belanda dan bertanya nama daerah tersebut, namun karena terdapat kesalahan pelafalan yang di lakukan tentara Belanda saat itu, berubahlah nama Sappa menjadi Seppang. Dalam versi lain, kata Seppang juga diambil dari kata "Seppa" yang diartikan sebagai tempat bersatu. Hal tersebut, memiliki makna jika wilayah Seppang akan menjadi tempat bersatunya berbagai suku dan budaya. Pemaknaan itu diyakini kuat oleh para tokoh masyarakat karena pada hakikatnya Seppang di prakarsai oleh berbagai suku yakni orang-orang keturunan Bone, Gowa, Kajang dan Jeneponto. 
+        <p class="text-justify mb-4">
+            Pada saat terjadi perang dan konflik yang berkepanjangan di tahun 1960-an, Seppang yang saat itu dipimpin oleh seorang anre guru (sebutan pemerintah saat itu) serta didampingi oleh para tentara hijrah meninggalkan wilayah pemukiman ke hutan belantara dan membangun wilayah baru yang kemudian menjadi cikal-bakal wilayah Desa Seppang saat ini. Tidak lama kemudian, mulailah terbentuk daerah-daerah administratif yang diakui pemerintah saat itu. Seppang tergabung dalam sebuah wilayah Desa Dannuang yang di pimpin oleh seorang Kepala Listrik, sementara kekududukan Seppang menjadi sebuah daerah sub-desa (saat ini dusun) yakni Lingkungan Seppang dipimpin oleh Abdullah Dg.Hatta yang juga merupakan keturunan dari anre guru sebelumnya.
+        <p class="text-justify mb-4">
+            Di tahun 1986 terjadi pemekaran wilayah Desa Dannuang menjadi beberapa Desa baru diantaranya Desa Seppang, Desa Bijawang, Desa Padalloang dan Kelurahan Dannuang. Desa Seppang sendiri ikut terpisah dan membentuk empat Dusun administratif yaitu Dusun Batuloe, Dusun Kampung Tengnga, Dusun Tanah Cellae dan Dusun Mattirowalie. Pada saat pembentukan desa persiapan, masyarakat Desa Seppang melakukan pemilihan kepala desa yang akhirnya mengangkat A.Abd Azis sebagai kepala desa pertama.
+        </p>
+
+
+        <div id ="pemimpin" class="flex items-center mt-8 mb-3">
+            <div class="w-1 bg-blue-800 h-12 mr-4"></div>
+            <h1 class="text-3xl font-bold text-black" style="font-family: 'Poppins', sans-serif;">Pemimpin Desa Seppang</h1>
+        </div>
+        <ol class="list-decimal list-inside ml-4 space-y-2">
+            <li>
+                <strong>A. Abd Azis (1986-1994)</strong>
+                <p class="text-justify mb-4">
+                    A.Abd Azis menjadi kepala desa pertama setelah Seppang terpisah dari wilayah Dannuang. Sistem pemilihan pada saat itu telah dilakukan dalam bentuk pemilihan umum meskipun dalam skema dan aturan yang masih sangat sederhana.
+                </p>
+                <div class="flex flex-col items-center my-4">
+                    <img src="images/kepala_desa_pertama.png" alt="Kepala Desa Pertama Seppang" class="w-64 rounded shadow-md">
+                    <p class="text-sm text-gray-600 mt-2 italic">Gambar 1.1 Kepala Desa Pertama Seppang (A.Abd Azis)</p>
+                </div>
+                <p class="text-justify mb-4">
+                    A.Abd Azis memimpin Seppang masih dalam tahap desa persiapan selama 8 tahun. Kontribusi yang diberikan A.Abd Azis selama menjabat adalah perancangan jalan penghubung Kampung Tengnga dan Takkue serta peletakan dasar-dasar pemerintahan di Desa Seppang.
+                </p>
+            </li>
+            <li>
+                <strong> Tamrin (2004-2009)</strong>
+                <p class="text-justify mb-4">
+                   Setelah masa jabatan A.Abd Azis berakhir, maka masyarakat Desa Seppang kembali melakukan pemilihan secara langsung yang lebih terstruktur. Hasil yang didaptkan adalah mengangkat Tamrin sebagai kepala desa kedua. Tamrin memimpin Seppang selama satu periode atau 5 tahun.
+                </p>
+            </li>
+            <li>
+                <strong>Drs. Muhammad Bakri (2009-2013)</strong>
+                <p class="text-justify mb-4">
+                    Masa jabatan Kepala Desa Tamrin berakhir setelah lima tahun, setelahnya dilakukan kembali pemilihan umum untuk memilih kepala desa yang baru. Pemungutan suara itu akhirnya mengangkat Drs. Muhammad Bakri sebagai kepala desa. Drs. Muhammad Bakri mengakhiri masa jabatannya setelah lima tahun berjalan. Kepala Desa ini dikenal fokus dengan sektor pertanian.
+                <div class="flex flex-col items-center my-4">
+                    <img src="images/kepala_desa_ketiga.png" alt="Kepala Desa Pertama Seppang" class="w-64 rounded shadow-md">
+                    <p class="text-sm text-gray-600 mt-2 italic">Gambar 1.2 Kepala Desa Ketiga (Drs.Muhammad Bakri)</p>
+                </div>
+            </li>
+            <li>
+                <strong>Tampa Tahir (2013–2019)</strong>
+                <p class="text-justify mb-4">
+                    Tampa Tahir terangkat setelah masa jabatan kepala desa Drs. Muhammad Bakri berakhir. Pengangkatan ini dilakukan setelah Tampa memenangkan suara terbanyak dalam pemilihan kepala desa.
+                </p>
+
+                <div class="flex flex-col items-center my-4">
+                    <img src="images/kepala_desa_keempat.png" alt="Kepala Desa Keempat Seppang" class="w-64 rounded shadow-md">
+                    <p class="text-sm text-gray-600 mt-2 italic">Gambar 1.3 Kepala Desa Keempat Seppang (Tampa Tahir)</p>
+                </div>
+
+                <p class="text-justify mb-4">
+                    Namun, Tampa Tahir hanya bisa menjalani masa jabatan selama tiga tahun karena meninggal dunia. Sehingga ditunjuk beberapa Pelaksana Tugas (PLT) Kepala Desa di antaranya:
+                </p>
+
+                <ol type="a" class="list-[lower-alpha] list-inside ml-4 space-y-2">
+                    <li>
+                        <strong>2016–2017:</strong>  A.Sirajuddin terpilih menjadi PLT kepala desa yang terpilih melalui musyawarah pemerintah dan tokoh masyarakat setempat. A. Sirajuddin kemudian digantikan oleh A. Yuniar ditahun yang sama.
+                    </li>
+                    <li>
+                        <strong>2017–2020:</strong> Selanjutnya Samsu menjadi PLT selanjutnya yang disepakati untuk mengambil alih posisi kepala desa. Jabatan sebagai PLT ini dijalani Samsu selama 3 tahun hingga periode pemerintahan Tampa Tahir berakhir.
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <strong>Samsu (2020-2025)</strong>
+                <p class="text-justify mb-4">
+                    Setelah menjalani tugas sebagai PLT Desa Seppang selama tiga tahun, Samsu akhirnya terpilih secara resmi menjadi kepala Desa Seppang sebagai pemenang dalam pemilihan umum.
+                </p>
+                <div class="flex flex-col items-center my-4">
+                    <img src="imagesstruktur/Foto Pak desa.jpeg" alt="Kepala Desa Pertama Seppang" class="w-64 rounded shadow-md">
+                    <p class="text-sm text-gray-600 mt-2 italic">Gambar 1.4 Kepala Desa Kelima Seppang (Samsu)</p>
+                </div>
+                <p class="text-justify mb-4">
+                    Samsu hingga saat ini masih memimpin Desa Seppang dengan penuh tanggung jawab dan dikenal tegas dalam menjalani jabatannya sebagai seorang pemimpin. Kepemimpinannya berfokus pada pembangunan fisik dan pembangunan sumber daya manusia yang berkualitas serta diimbangi dengan tingkat keimanan yang tinggi di Desa Seppang.
+                </p>
+            </li>
+        </ol>
+
+</body>
+</html> 

@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Desa Seppang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* body {
+               font-family: 'Poppins', sans-serif;
+           } */
+     </style>
+   
+    <style>
+      /* Tambahkan transisi untuk efek halus */
+      .nav-link {
+        transition: color 0.3s ease;
+      }
+      /* Warna teks saat aktif */
+      .nav-link.active {
+        color: #f4a222;
+        font-weight: bold;
+      }
+      /* CSS untuk navbar responsif */
+      @media (max-width: 700px) {
+            #nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #042042;
+                padding: 1rem;
+                z-index: 1000;
+            }
+            #nav-menu.active {
+                display: block;
+            }
+            #nav-menu ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            #nav-menu ul li {
+                width: 100%;
+            }
+            #nav-menu ul li a {
+                display: block;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* Tambahkan transisi untuk efek halus */
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        /* Warna teks saat aktif */
+        .nav-link.active {
+            color: #f4a222;
+            font-weight: bold;
+        }
+
+        .hover-zoom:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+  </head>
+  <body class="bg-gray-200 pt-14">
+    <header class="fixed top-0 left-0 right-0 bg-[#042042] p-2 flex items-center z-50 shadow-lg transition-all duration-300">
+      <div class="container mx-auto flex items-center">
+          <div class="flex items-center">
+                <img 
+                    alt="Logo of Bulukumba" 
+                    class="h-10 w-10 mr-4 shadow-md hover:rotate-12 transition-transform duration-300" 
+                    height="40" 
+                    src="images/logo bulkum fix.png" 
+                    width="40" 
+                />
+              <div>
+                  <h1 class="text-[#f4a222] text-xl font-bold tracking-wider">Desa Seppang</h1>
+                  <p class="text-white text-sm opacity-80">Kabupaten Bulukumba</p>
+              </div>
+          </div>
+          <!-- Tambahkan ikon hamburger di sini -->
+          <button id="hamburger" class="md:hidden text-white text-2xl ml-auto">
+              <i class="fas fa-bars"></i>
+          </button>
+          <nav id="nav-menu" class="ml-auto hidden md:block">
+                <ul class="flex flex-col md:flex-row md:space-x-4 text-white">
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="index.html"
+                        >
+                            Home
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="profildesa.html"
+                        >
+                            Profil Desa
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="infografis.html"
+                        >
+                            Infografis
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="umkm.html"
+                        >
+                            UMKM
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                    <li class="group relative">
+                        <a 
+                            class="block relative z-10 font-bold nav-link px-3 py-2 group-hover:text-white transition-all duration-300" 
+                            href="about.html"
+                        >
+                            About
+                            <span class="absolute inset-0 bg-white bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg -z-10"></span>
+                        </a>
+                    </li>
+                </ul>
+          </nav>
+      </div>
+  </header>
+
+    <div class="bg-gray-200 mb-8">
+      
+      <div class="max-w-4xl mx-auto p-4">
+      <div>
+      <div class="flex items-center mb-1">
+        <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+        <h1 class="text-4xl font-bold text-gray-800" style="font-family: 'Poppins', sans-serif;">Infografis</h1>
+    </div>
+    <h2 class="text-2xl text-gray-600 mb-4" style="font-family: 'Poppins', sans-serif;">Data Umum Desa Seppang</h2>
+  </div>
+</div>
+
+   <div class="bg-gray-100 max-w-4xl mx-auto p-4 rounded-lg shadow-md">
+  <div class="max-w-4xl mx-auto p-4">
+    <div class="flex items-center mb-4">
+      <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+      <h1 class="text-3xl font-bold text-blue-600">Jumlah Penduduk</h1>
+    </div>
+
+    <!-- SEMUA BOX DALAM SATU GRID -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <!-- Penduduk -->
+      <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-users text-4xl text-[#042042] mr-4"></i>
+        <div>
+          <p class="text-gray-600">TOTAL PENDUDUK</p>
+          <p class="text-2xl font-bold text-gray-800">4565 Jiwa</p>
+        </div>
+      </div>
+
+      <!-- Kepala Keluarga -->
+      <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-house-user text-4xl text-[#042042] mr-4"></i>
+        <div>
+          <p class="text-gray-600">KEPALA KELUARGA</p>
+          <p class="text-2xl font-bold text-gray-800">1302 KK</p>
+        </div>
+      </div>
+
+      <!-- Dusun -->
+      <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-map text-4xl text-[#042042] mr-4"></i>
+        <div>
+          <p class="text-gray-600">JUMLAH DUSUN</p>
+          <p class="text-2xl font-bold text-gray-800">4 Dusun</p>
+        </div>
+      </div>
+
+      <!-- RW -->
+      <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-sitemap text-4xl text-[#042042] mr-4"></i>
+        <div>
+          <p class="text-gray-600">JUMLAH RW</p>
+          <p class="text-2xl font-bold text-gray-800">9</p>
+        </div>
+      </div>
+
+      <!-- RT -->
+      <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-network-wired text-4xl text-[#042042] mr-4"></i>
+        <div>
+          <p class="text-gray-600">JUMLAH RT</p>
+          <p class="text-2xl font-bold text-gray-800">24</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="max-w-4xl mx-auto p-4 rounded-lg shadow-md mt-8 bg-gray-100">
+    <div class="flex items-center mb-4">
+        <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+        <h1 class="text-3xl font-bold text-blue-600">Sarana dan Prasarana</h1>
+    </div>
+
+    <div class="grid grid-cols-1 gap-4">
+        <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <!-- Ganti gambar dengan ikon -->
+        <i class="fas fa-building text-4xl text-[#042042] mr-4"></i>
+        <div>
+            <p class="text-gray-600">KANTOR DESA</p>
+            <p class="text-2xl font-bold text-gray-800">1 UNIT</p>
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-4 rounded-lg shadow-md mt-8 bg-gray-100">
+    <div class="flex items-center mb-4">
+        <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+        <h1 class="text-3xl font-bold text-blue-600">Sarana Kesehatan</h1>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+            <!-- POSYANDU -->
+            <div class="bg-white p-4 rounded-lg shadow flex items-center">
+                <i class="fas fa-user-nurse text-4xl text-[#042042] mr-4"></i>
+                <div>
+                <p class="text-gray-600">POSYANDU</p>
+                <p class="text-2xl font-bold text-gray-800">5 BUAH</p>
+                </div>
+            </div>
+
+            <!-- POSKESDES -->
+            <div class="bg-white p-4 rounded-lg shadow flex items-center">
+                <i class="fas fa-clinic-medical text-4xl text-[#042042] mr-4"></i>
+                <div>
+                <p class="text-gray-600">POSKESDES</p>
+                <p class="text-2xl font-bold text-gray-800">1 BUAH</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-4 rounded-lg shadow-md mt-8 bg-gray-100">
+    <div class="flex items-center mb-4">
+        <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+        <h1 class="text-3xl font-bold text-blue-600">Sarana Kesehatan</h1>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 mt-2">
+    <!-- PAUD -->
+    <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-child text-4xl text-[#042042] mr-4"></i>
+        <div>
+        <p class="text-gray-600">PAUD</p>
+        <p class="text-2xl font-bold text-gray-800">1 BUAH</p>
+        </div>
+    </div>
+
+    <!-- TK -->
+    <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-school text-4xl text-[#042042] mr-4"></i>
+        <div>
+        <p class="text-gray-600">TK</p>
+        <p class="text-2xl font-bold text-gray-800">2 BUAH</p>
+        </div>
+    </div>
+
+    <!-- SD -->
+    <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-book-open text-4xl text-[#042042] mr-4"></i>
+        <div>
+        <p class="text-gray-600">SD</p>
+        <p class="text-2xl font-bold text-gray-800">3 BUAH</p>
+        </div>
+    </div>
+
+    <!-- SMP -->
+    <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-chalkboard-teacher text-4xl text-[#042042] mr-4"></i>
+        <div>
+        <p class="text-gray-600">SMP</p>
+        <p class="text-2xl font-bold text-gray-800">1 BUAH</p>
+        </div>
+    </div>
+
+    <!-- PKBM -->
+    <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-graduation-cap text-4xl text-[#042042] mr-4"></i>
+        <div>
+        <p class="text-gray-600">PKBM</p>
+        <p class="text-2xl font-bold text-gray-800">1 BUAH</p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-4 rounded-lg shadow-md mt-8 bg-gray-100">
+        <div class="flex items-center mb-4">
+            <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+            <h1 class="text-3xl font-bold text-blue-600">Prasarana Ibadah</h1>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+        <div class="bg-white p-4 rounded-lg shadow flex items-center">
+            <i class="fas fa-mosque text-4xl text-[#042042] mr-4"></i>
+            <div>
+            <p class="text-gray-600">MASJID</p>
+            <p class="text-2xl font-bold text-gray-800">6 BUAH</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="max-w-4xl mx-auto p-4 rounded-lg shadow-md mt-8 bg-gray-100">
+        <div class="flex items-center mb-4">
+            <div class="w-1 bg-blue-500 h-12 mr-4"></div>
+            <h1 class="text-3xl font-bold text-blue-600">Prasarana Ibadah</h1>
+        </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+    <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-futbol text-4xl text-[#042042] mr-4"></i>
+        <div>
+        <p class="text-gray-600">SEPAK BOLA</p>
+        <p class="text-2xl font-bold text-gray-800">2 BUAH</p>
+        </div>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-volleyball text-4xl text-[#042042] mr-4"></i>
+        <div>
+        <p class="text-gray-600">VOLI</p>
+        <p class="text-2xl font-bold text-gray-800">1 BUAH</p>
+        </div>
+    </div>
+
+    <div class="bg-white p-4 rounded-lg shadow flex items-center">
+        <i class="fas fa-store text-4xl text-[#042042] mr-4"></i>
+        <div>
+        <p class="text-gray-600">PASAR DESA</p>
+        <p class="text-2xl font-bold text-gray-800">1 BUAH</p>
+        </div>
+    </div>
+    </div>
+    </div>
+
+     <div class="bg-[#042042] text-white pb-4 mt-12">
+
+      
+  <div class="container mx-auto px-8 py-8"> <!-- Tambah padding horizontal -->
+        <div class="flex justify-between items-center pb-6"> <!-- Perkecil padding bottom -->
+            <div class="flex space-x-6 items-center">
+                <!-- Logo 1 -->
+                <img
+                    alt="Logo 1"
+                    class="h-12 opacity-80 hover:opacity-100 transition-opacity"
+                    src="images/logo bulkum fix.png"
+                />
+                <!-- Logo 2 - Diperbesar skalanya tanpa ubah tinggi -->
+                <img
+                    alt="Logo 2"
+                    class="h-12 scale-150 w-auto opacity-80 hover:opacity-100 transition-transform"
+                    src="images/logo kkn seppang.png"
+                />
+                <!-- Logo 3 -->
+                <img
+                    alt="Logo 3"
+                    class="h-12 opacity-80 hover:opacity-100 transition-opacity"
+                    src="images/logo unhas.png"
+                />
+            </div>
+            <div class="flex space-x-6"> <!-- Perbesar jarak antar ikon -->
+                <!-- <a class="text-white text-sm hover:text-blue-300 transition-colors" href="">
+                    <i class="fab fa-facebook-f fa-2x"></i> Ukuran ikon diperbesar -->
+                <!-- </a> -->
+                <a class="text-white text-sm hover:text-pink-400 transition-colors" href="https://www.instagram.com/kkn114.desa_seppang?igsh=MnhiZWhmYnh1eWUy">
+                    <i class="fab fa-instagram fa-2x"></i> <!-- Ukuran ikon diperbesar -->
+                </a>
+                <a class="text-white text-sm hover:text-red-500 transition-colors" href="https://maps.app.goo.gl/cT4v236yNhPnChHP8">
+                    <i class="fas fa-map-marker-alt fa-2x"></i> <!-- Ukuran ikon diperbesar -->
+                </a>
+                <!-- <a class="text-white text-sm hover:text-gray-300 transition-colors" href="#">
+                    <i class="fab fa-github fa-2x"></i> 
+                </a> -->
+            </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-6 text-justify">
+            <!-- Website Profil Desa -->
+            <div class="space-y-2">
+                <h2 class="text-base text-[#f4a222] font-bold">Website Profil Desa</h2>
+                <p class="text-xs text-gray-300">
+                    Website profil Desa merupakan situs web yang memuat informasi dasar mengenai desa, sejarah, visi dan misi desa, sampai dengan peta wilayah desa.
+                </p>
+            </div>
+
+            <!-- Developer -->
+            <div class="space-y-2">
+                <h2 class="text-base text-[#f4a222] font-bold">Developer</h2>
+                <p class="text-xs text-gray-300">
+                    Website ini dibuat oleh Rezqia, Mahasiswa KKN Universitas Hasanuddin Gelombang 114 Desa Seppang pada Juli 2025.
+                </p>
+            </div>
+
+            <!-- Harapan & Tujuan + Desa Seppang -->
+            <div class="space-y-4 md:col-span-2 md:flex md:space-x-4">
+                <!-- Harapan & Tujuan -->
+                <div class="space-y-2 md:w-1/2">
+                    <h2 class="text-base text-[#f4a222] font-bold">Harapan &amp; Tujuan</h2>
+                    <p class="text-xs text-gray-300">
+                        Situs web profil ini dibuat untuk tujuan promosi dan publisitas Desa Seppang agar lebih dikenal oleh khalayak ramai baik di dalam maupun di luar Desa Seppang.
+                    </p>
+                </div>
+
+                <!-- Desa Seppang -->
+                <div class="space-y-2 md:w-1/2">
+                    <h2 class="text-base text-[#f4a222] font-bold">Desa Seppang</h2>
+                    <p class="text-xs text-gray-300">
+                        Kec. Ujung Loe, Kab. Bulukumba, Sulawesi Selatan
+                    </p>
+                </div>
+            </div>
+        </div>
+
+<div class="text-center mt-6 border-t-2 border-gray-600 pt-4">
+    <p class="text-xs text-gray-400">
+        © 2025 Desa Seppang - All rights reserved
+    </p>
+</div>
+</div>
+</div>
+
+<script>
+  // Toggle hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+  const currentPage = window.location.pathname.split("/").pop(); // nama file
+  const links = document.querySelectorAll(".nav-link");
+
+  links.forEach(link => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+});
+</script>
+
+
+  </body>
+</html>
